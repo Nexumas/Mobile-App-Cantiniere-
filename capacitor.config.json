@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Cantiniere Mobile",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
