@@ -1,7 +1,0 @@
-{
-  "name": "cantiniere-mobile",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
