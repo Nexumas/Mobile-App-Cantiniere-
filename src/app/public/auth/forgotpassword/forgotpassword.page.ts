@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl, FormGroup, FormGroupDirective, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-forgotpassword',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ForgotpasswordPage implements OnInit {
 
-  constructor() { }
+  forgotpasswordform: FormGroup;
 
-  ngOnInit() {
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.forgotpasswordform = new FormGroup({
+      email: new FormControl('', [Validators.required, Validators.email])
+    });
+  }
+
+  skip(): void{
+    this.router.navigateByUrl('public/auth/login');
+  }
+
+  onSubmit(): void {
+
   }
 
 }

@@ -5,5 +5,40 @@
 </ion-header>
 
 <ion-content>
-
+  <div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      <div>
+        <h1>Connexion</h1>
+      </div>
+      <div>
+        <ion-input type="text" formControlName="email" placeholder="E-mail"></ion-input>
+        <div class="errors" *ngIf="loginForm.controls.email?.hasError('required') && loginForm.controls.email?.dirty">
+          email requis !
+        </div>
+      </div>
+      <div>
+        <ion-input type="password" formControlName="password" placeholder="Mot de passe"></ion-input>
+        <div class="errors" *ngIf="loginForm.controls.password?.hasError('required') && loginForm.controls.password?.dirty">
+          mot de passe requis !
+        </div>
+      </div>
+      <div>
+        <input type="submit" value="Se connecter" [disabled]="!loginForm.valid" />
+      </div>
+      <div>
+        <button (click)="forgotpassword()" class="forgotpassword">
+          Mot de passe oublié ?
+        </button>
+      </div>
+      <div>
+        <hr />
+      </div>
+      <div>
+        <button (click)="signup()" class="signup">Inscrivez-vous</button>
+      </div>
+      <div class="errors" style="text-align: center;" *ngIf="loginForm.invalid && submitted === true">
+        Formulaire invalide !
+      </div>
+    </form>
+  </div>
 </ion-content>
