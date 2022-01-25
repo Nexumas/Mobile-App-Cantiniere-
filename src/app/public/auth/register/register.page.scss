@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-form {
+.container form {
   height: 80%;
   width: 80%;
   display: flex;
@@ -14,9 +14,9 @@ form {
   align-items: stretch;
   flex-direction: column;
   padding: 30px;
-  border: 1px solid #f1f1f1;
+  border: 1px solid rgb(52, 56, 58);
   border-radius: 15px;
-  background: #fff;
+  background: rgb(36, 38, 38);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -52,17 +52,17 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: white;
-  color: #ba2929;
+  background-color: #9a2e2e;
+  color: #ffffff;
   border: 1px solid #ba2929;
 }
 
 .login {
-  background-color: #c5c0c0;
+  background-color: #635d5d;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
-  border: 1px solid #c5c0c0;
+  border: 1px solid #8b8888;
   border-radius: 15px;
   cursor: pointer;
   width: 100%;
@@ -70,9 +70,9 @@ input[type="submit"]:hover {
 }
 
 .login:hover {
-  background-color: white;
+  background-color: #524f4f;
   color: #c5c0c0;
-  border: 1px solid #c5c0c0;
+  border: 1px solid #717171;
 }
 
 .mat-radio-button ~ .mat-radio-button {
